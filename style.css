@@ -1,10 +1,10 @@
 :root {
     --bg-color: #f0f4f8;
     --text-color: #334e68;
-    --primary-color: #3498db;
-    --primary-dark: #2980b9;
-    --accent-color: #2ecc71;
-    --accent-dark: #27ae60;
+    --primary-color: #1f78b4;
+    --primary-dark: #1a6496;
+    --accent-color: #1e7e34; /* Darker green for AA contrast */
+    --accent-dark: #155d27;
     --error-color: #e74c3c;
     --container-bg: #ffffff;
     --border-color: #b0bec5;
@@ -66,7 +66,7 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="number"]:focus {
     border-color: var(--primary-color);
     outline: none;
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 0 0 3px rgba(31, 120, 180, 0.4);
 }
 
 button {
@@ -150,18 +150,17 @@ button:disabled {
     gap: 0.75rem;
     flex-wrap: wrap;
 }
-
-.input-group label {
-    /* Visually hidden but accessible to screen readers */
-    position: absolute;
-    width: 1px;
-    height: 1px;
+fieldset {
+    border: none;
     padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+    margin: 0;
+}
+legend {
+    padding: 0; /* Reset browser default padding */
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-color);
 }
 
 .info-panel p {

@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         body.classList.remove('win', 'lose');
         guessInput.disabled = false;
         guessButton.disabled = false;
+        guessInput.focus();
         updateUI();
     };
 
@@ -49,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             gameActive = false;
             guessInput.disabled = true;
             guessButton.disabled = true;
+            resetButton.focus(); // WCAG 2.4.11: Focus Not Obscured
         } else {
             if (score > 1) {
                 score--;
@@ -63,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 gameActive = false;
                 guessInput.disabled = true;
                 guessButton.disabled = true;
+                resetButton.focus(); // WCAG 2.4.11: Focus Not Obscured
             }
         }
     };

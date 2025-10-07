@@ -14,11 +14,13 @@
     <main class="container">
         <section class="game-panel">
             <p class="instructions">I'm thinking of a number between 1 and 30.</p>
-            <div class="input-group">
-                <label for="guessInput">Your Guess:</label>
-                <input type="number" id="guessInput" min="1" max="30" placeholder="?" />
-                <button id="guessButton">Guess</button>
-            </div>
+            <fieldset>
+                <legend>Your Guess:</legend>
+                <div class="input-group">
+                    <input type="number" id="guessInput" min="1" max="30" placeholder="?" />
+                    <button id="guessButton">Guess</button>
+                </div>
+            </fieldset>
             <p id="result" aria-live="polite"></p>
         </section>
         <section class="info-panel">
